@@ -4,18 +4,20 @@ import java.util.Scanner;
 public class prime {
 	public static void main(String[] args)
 	{
-		int i;
-		Scanner sc=new Scanner(System.in);
-		int n=sc.nextInt();
-		i=n/2;
-		if(n==i)
+        int i=0,count=0,num=Integer.parseInt(args[0]);
+		
+		for(i=2;i<=num;i++)
 		{
-			System.out.println("The given number is prime");
+		
+			if(num%i==0)
+				count++;
 		}
+		
+		if(count==1)
+			System.out.println("Given Number "+num+" is Prime");
 		else
-		{
-			System.out.println("The given number is not prime");
-		}
+			System.out.println("Given Number "+num+" is Not Prime");
+	}
 	}
 
-}
+
